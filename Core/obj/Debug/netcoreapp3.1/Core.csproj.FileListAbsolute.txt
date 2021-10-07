@@ -1,0 +1,13 @@
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\bin\Debug\netcoreapp3.1\System.Reactive.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\bin\Debug\netcoreapp3.1\System.Reactive.xml
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.csproj.AssemblyReference.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Core\obj\Debug\netcoreapp3.1\Core.pdb
