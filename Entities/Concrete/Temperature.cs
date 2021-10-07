@@ -13,5 +13,6 @@ namespace Entities.Concrete
         public double? Value { get; set; }
         public string FieId { get; set; }
         public string Measurement { get; set; } 
+
     }
 }
