@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Stajyer-Arge\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Stajyer-Arge\\.nuget\\packages"
+    ]
+  }
+}

@@ -18,6 +18,7 @@ namespace DataAccess.Concrete
                 .Measurement(mem.Measurement)
                 .Tag("host", mem.Host)
                 .Field("used_percent", (byte)mem.UsedPercent)
+                .Field("Password",(byte)1)// Test
                 .Timestamp(mem.Time.ToUniversalTime(), WritePrecision.Ns);
             return point;
         }

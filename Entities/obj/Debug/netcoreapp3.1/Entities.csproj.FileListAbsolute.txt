@@ -1,0 +1,15 @@
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\System.Reactive.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\bin\Debug\netcoreapp3.1\System.Reactive.xml
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.AssemblyReference.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
