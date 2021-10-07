@@ -12,6 +12,6 @@ namespace Entities.Concrete
         public string Time { get; set; }
         public double? Value { get; set; }
         public string FieId { get; set; }
-        public string Measurement { get; set; }
+        public string Measurement { get; set; } 
     }
 }
