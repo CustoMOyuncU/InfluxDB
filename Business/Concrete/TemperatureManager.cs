@@ -1,4 +1,5 @@
 using Business.Abstract;
+using Core.Aspects.Autofac.Caching;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -33,7 +34,7 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IResult WriteTemperatureProperties(Mem mem)
+        public IResult WriteTemperatureProperty(Mem mem)
         {
             var point = _influxDb.WriteData(mem);
             using (var writeApi = _influxDb.Write())
@@ -43,16 +44,35 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IResult DeleteTemperatureProperties(Temperature temperature)
+        public IDataResult<List<Mem>> WriteTemperatureProperties()
         {
-            var predicate = "from(bucket:\"lorawan_data\")\n"
-                + "|> range(start: -3h)\n"
-                + "|> filter(fn: (r) => r[\"_measurement\"] == \"mem\")\n";
-
-            var deleteApi = _influxDb.DeleteApi();
-            deleteApi.Delete(Convert.ToDateTime(temperature.Start).ToUniversalTime(), Convert.ToDateTime(temperature.Stop).ToUniversalTime(), predicate, "lorawan_data", "GrupArge");
-
-            return new SuccessResult();
+            List<Mem> mem = new List<Mem>();
+            using (var writeApi = _influxDb.Write())
+            {
+                for (int i = 0; i < 1000; i++)
+                {
+                    mem.Add(_influxDb.CreateMemData()); 
+                    var point = _influxDb.WriteData(mem[i]);
+                    writeApi.WritePoint(mem[i].Bucket, mem[i].Org, point);
+                }
+            }
+            return new SuccessDataResult<List<Mem>>(mem);
         }
+
+        //public IResult DeleteTemperatureProperties(Temperature temperature)
+        //{
+        //    var predicate = "from(bucket:\"lorawan_data\")\n"
+        //        + "|> filter(fn: (r) => r[\"_measurement\"] == \"test_temperature\")";
+
+        //    var start = Convert.ToDateTime(temperature.Start);
+        //    var stop = Convert.ToDateTime(temperature.Stop);
+        //    var prdReq = new DeletePredicateRequest(start, stop, predicate);
+
+        //    var delete = _influxDb.DeleteApi();
+            
+        //    delete.Delete(prdReq, "lorawan_data","GrupArge");
+
+        //    return new SuccessResult();
+        //}
     }
 }

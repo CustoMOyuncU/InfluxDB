@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
     public interface IInfluxDb : IInfluxDbRepository
     {
         PointData WriteData(Mem mem);
+        Mem CreateMemData();
     }
 }

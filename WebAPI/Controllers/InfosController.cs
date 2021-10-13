@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -24,10 +26,29 @@ namespace WebAPI.Controllers
             _temperatureService = temperatureService;
         }
 
-        [HttpPost("addtemperatureproperties")]
-        public IActionResult AddTemperatureProperties(Mem mem)
+        [HttpPost("addtemperatureproperty")]
+        public IActionResult AddTemperatureProperty(Mem mem)
         {
-            var result = _temperatureService.WriteTemperatureProperties(mem);
+            var result = _temperatureService.WriteTemperatureProperty(mem);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("addtemperatureproperties")]
+        public IActionResult AddTemperatureProperties()
+        {
+            var result = _temperatureService.WriteTemperatureProperties();
+            long size = 0;
+
+            using (Stream s = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(s, result);
+                size = s.Length;
+            }
             if (result.Success)
             {
                 return Ok(result);
@@ -43,7 +64,8 @@ namespace WebAPI.Controllers
             {
                 var flux = "from(bucket:\"lorawan_data\")\n"
                 + "|> range(start: -" + time + ")\n"
-                + "|> filter(fn: (r) => r[\"_measurement\"] == \"device_frmpayload_data_temperature\")\n"
+                + "|> filter(fn: (r) => r[\"_measurement\"] == \"test_temperature\")\n"
+                + "|> filter(fn: (r) => r[\"host\"] == \"host3\")\n"
                 + "|> group(columns: [\"_start\", \"_time\", \"_stop\", \"_measurement\", \"_field\"])\n"
                 + "|> yield(name: \"mean\")";
                 var tables = await query.QueryAsync(flux, "GrupArge");
@@ -63,17 +85,17 @@ namespace WebAPI.Controllers
             return Ok(results);
         }
 
-        [HttpPost("deletetemperatureproperties")]
-        public IActionResult DeleteTemperatureProperties(Temperature temperature)
-        {
-            // Not working
-            var result = _temperatureService.DeleteTemperatureProperties(temperature);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+        //[HttpPost("deletetemperatureproperties")]
+        //public IActionResult DeleteTemperatureProperties(Temperature temperature)
+        //{
+        //    // Not working
+        //    var result = _temperatureService.DeleteTemperatureProperties(temperature);
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
 
     }
 }
