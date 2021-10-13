@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-
+    [Serializable]
     public class Mem : IEntity
     {
         public string Host { get; set; }

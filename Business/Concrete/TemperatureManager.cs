@@ -7,6 +7,8 @@ using InfluxDB.Client;
 using InfluxDB.Client.Api.Domain;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
 namespace Business.Concrete
@@ -49,14 +51,20 @@ namespace Business.Concrete
             List<Mem> mem = new List<Mem>();
             using (var writeApi = _influxDb.Write())
             {
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < 22; i++)
                 {
                     mem.Add(_influxDb.CreateMemData()); 
                     var point = _influxDb.WriteData(mem[i]);
                     writeApi.WritePoint(mem[i].Bucket, mem[i].Org, point);
                 }
             }
-            return new SuccessDataResult<List<Mem>>(mem);
+            //BinaryFormatter bf = new BinaryFormatter();
+            //MemoryStream ms = new MemoryStream();
+            //bf.Serialize(ms, mem);
+            //ms.ToArray();
+            
+            //var byteLength = ms.Length;
+            return new SuccessDataResult<List<Mem>>(mem,byteLength.ToString());
         }
 
         //public IResult DeleteTemperatureProperties(Temperature temperature)

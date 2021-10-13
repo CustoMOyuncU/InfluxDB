@@ -8,9 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -41,16 +40,9 @@ namespace WebAPI.Controllers
         public IActionResult AddTemperatureProperties()
         {
             var result = _temperatureService.WriteTemperatureProperties();
-            long size = 0;
-
-            using (Stream s = new MemoryStream())
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(s, result);
-                size = s.Length;
-            }
+            
             if (result.Success)
-            {
+            {           
                 return Ok(result);
             }
             return BadRequest(result);

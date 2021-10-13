@@ -115,3 +115,4 @@ C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\WebAPI\obj\Debug\netcoreapp3.1\W
 C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+C:\Users\Stajyer-Arge\Desktop\Ödevler\InfluxDB\WebAPI\bin\Debug\netcoreapp3.1\ByteSize.dll

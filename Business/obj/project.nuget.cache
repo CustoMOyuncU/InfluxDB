@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wotiMJPjqrH5qmqM/Yg+fhHaDFTK5ViwUYE7vDE4UnpXTuW8zaseJk7if1OuAG/INSgMXShmmSFR7GYL/rPCxg==",
+  "dgSpecHash": "RRFAEVed++g9WDyx4d7VynmqqNtWqruVIkkvMmQtkruHkvjD9woow0pVmA9NmONfYUgyimabBaD7sb0sAEXIbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stajyer-Arge\\Desktop\\Ödevler\\InfluxDB\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
+    "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\bytesize\\2.1.0\\bytesize.2.1.0.nupkg.sha512",
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
     "C:\\Users\\Stajyer-Arge\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
