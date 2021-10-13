@@ -15,6 +15,5 @@ namespace Entities.Concrete
         public string Org { get; set; }
         public double? UsedPercent { get; set; }
         public DateTime Time { get; set; }
-        public string Password { get; set; }
     }
 }
