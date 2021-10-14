@@ -64,7 +64,7 @@ namespace Business.Concrete
             //ms.ToArray();
             
             //var byteLength = ms.Length;
-            return new SuccessDataResult<List<Mem>>(mem,byteLength.ToString());
+            return new SuccessDataResult<List<Mem>>(mem);
         }
 
         //public IResult DeleteTemperatureProperties(Temperature temperature)
