@@ -51,12 +51,12 @@ namespace WebAPI.Controllers
         [HttpGet("gettemperature")]
         public async Task<IActionResult> GetTemperatureSettings([FromServices] InfluxDbRepositoryBase service, string time)
         {
-            if (time == null) time = "15m";
+            if (time == null) time = "24h";
             var results = await service.QueryAsync(async query =>
             {
                 var flux = "from(bucket:\"lorawan_data\")\n"
                 + "|> range(start: -" + time + ")\n"
-                + "|> filter(fn: (r) => r[\"_measurement\"] == \"test_temperature\")\n"
+                + "|> filter(fn: (r) => r[\"_measurement\"] == \"device_frmpayload_data_temperature\")\n"
                 + "|> filter(fn: (r) => r[\"host\"] == \"host3\")\n"
                 + "|> group(columns: [\"_start\", \"_time\", \"_stop\", \"_measurement\", \"_field\"])\n"
                 + "|> yield(name: \"mean\")";
